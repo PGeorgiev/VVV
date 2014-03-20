@@ -24,3 +24,8 @@ export WP_TESTS_DIR=/srv/www/wordpress-develop/tests/phpunit/
 
 # add autocomplete for grunt
 eval "$(grunt --completion=bash)"
+
+# Environmental variables
+export PS1="\u@\h \W: "
+export EDITOR="nano"
+export SVN_EDITOR="nano"
