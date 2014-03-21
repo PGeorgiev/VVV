@@ -6,17 +6,17 @@
 
 DROP DATABASE IF EXISTS `test`;
 
-CREATE DATABASE IF NOT EXISTS `supportpress_macenzie_dev`;
-GRANT ALL PRIVILEGES ON `supportpress_macenzie_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
+CREATE DATABASE IF NOT EXISTS `supportpress_dev`;
+GRANT ALL PRIVILEGES ON `supportpress_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
 
-CREATE DATABASE IF NOT EXISTS `wordcamp_macenzie_dev`;
-GRANT ALL PRIVILEGES ON `wordcamp_macenzie_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
+CREATE DATABASE IF NOT EXISTS `wordcamp_dev`;
+GRANT ALL PRIVILEGES ON `wordcamp_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
 
-CREATE DATABASE IF NOT EXISTS `wp_macenzie_dev`;
-GRANT ALL PRIVILEGES ON `wp_macenzie_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
+CREATE DATABASE IF NOT EXISTS `wp_dev`;
+GRANT ALL PRIVILEGES ON `wp_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
 
-CREATE DATABASE IF NOT EXISTS `wp_skeleton_macenzie_dev`;
-GRANT ALL PRIVILEGES ON `wp_skeleton_macenzie_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
+CREATE DATABASE IF NOT EXISTS `wp_skeleton_dev`;
+GRANT ALL PRIVILEGES ON `wp_skeleton_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
 
-CREATE DATABASE IF NOT EXISTS `wpms_macenzie_dev`;
-GRANT ALL PRIVILEGES ON `wpms_macenzie_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
+CREATE DATABASE IF NOT EXISTS `wpms_dev`;
+GRANT ALL PRIVILEGES ON `wpms_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
