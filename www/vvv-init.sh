@@ -25,8 +25,8 @@ CURRENT_SITE="wordcamp.dev"
 echo "Provisioning $CURRENT_SITE"
 if [ ! -d /srv/www/$CURRENT_SITE ]; then
 	wp core download --path=/srv/www/$CURRENT_SITE/wordpress
-	svn co https://wordcamp.svn.wordpress.org/bin /srv/www/$CURRENT_SITE/bin
-	svn co https://wordcamp.svn.wordpress.org/wp-content /srv/www/$CURRENT_SITE/wp-content
+	svn co https://wordcamp.svn.wordpress.org/bin        /srv/www/$CURRENT_SITE/bin        --username=iandunn
+	svn co https://wordcamp.svn.wordpress.org/wp-content /srv/www/$CURRENT_SITE/wp-content --username=iandunn
 
 	cp /srv/www/$CURRENT_SITE/wp-config-sample.php    /srv/www/$CURRENT_SITE/wp-config.php
 	sed -i '' 's/database_name_here/wordcamp_dev/'    /srv/www/$CURRENT_SITE/wp-config.php
