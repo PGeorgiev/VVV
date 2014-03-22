@@ -60,9 +60,6 @@ if [[ ! -d $CURRENT_SITE ]]; then
 fi
 
 
-# todo wp-develop.dev
-
-
 CURRENT_SITE="/srv/www/wp-skeleton.dev"
 echo "Provisioning $CURRENT_SITE"
 if [[ ! -d $CURRENT_SITE ]]; then
