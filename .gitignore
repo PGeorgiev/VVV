@@ -30,6 +30,9 @@
 *.sql
 *.sql.gz
 
+# Everything in the tools dir is created during provisioning
+/tools/*
+
 # BUT....
 
 # We do have some default nginx configs that should be included

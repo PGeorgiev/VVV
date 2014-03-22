@@ -359,19 +359,19 @@ fi
 
 if [[ $ping_result == *bytes?from* ]]; then
 	# WP-CLI Install
-	if [[ ! -d /srv/www/wp-cli ]]; then
+	if [[ ! -d /srv/tools/wp-cli ]]; then
 		echo -e "\nDownloading wp-cli, see http://wp-cli.org"
-		git clone git://github.com/wp-cli/wp-cli.git /srv/www/wp-cli
-		cd /srv/www/wp-cli
+		git clone git://github.com/wp-cli/wp-cli.git /srv/tools/wp-cli
+		cd /srv/tools/wp-cli
 		composer install
 	else
 		echo -e "\nUpdating wp-cli..."
-		cd /srv/www/wp-cli
+		cd /srv/tools/wp-cli
 		git pull --rebase origin master
 		composer update
 	fi
 	# Link `wp` to the `/usr/local/bin` directory
-	ln -sf /srv/www/wp-cli/bin/wp /usr/local/bin/wp
+	ln -sf /srv/tools/wp-cli/bin/wp /usr/local/bin/wp
 
 	# Download and extract phpMemcachedAdmin to provide a dashboard view and
 	# admin interface to the goings on of memcached when running
@@ -410,22 +410,22 @@ if [[ $ping_result == *bytes?from* ]]; then
 	fi
 
 	# PHP_CodeSniffer (for running WordPress-Coding-Standards)
-	if [[ ! -d /srv/www/phpcs ]]; then
+	if [[ ! -d /srv/tools/phpcs ]]; then
 		echo -e "\nDownloading PHP_CodeSniffer (phpcs), see https://github.com/squizlabs/PHP_CodeSniffer"
-		git clone git://github.com/squizlabs/PHP_CodeSniffer.git /srv/www/phpcs
+		git clone git://github.com/squizlabs/PHP_CodeSniffer.git /srv/tools/phpcs
 	else
 		echo -e "\nUpdating PHP_CodeSniffer (phpcs)..."
-		cd /srv/www/phpcs
+		cd /srv/tools/phpcs
 		git pull --rebase origin master
 	fi
 
 	# Sniffs WordPress Coding Standards
-	if [[ ! -d /srv/www/phpcs/CodeSniffer/Standards/WordPress ]]; then
+	if [[ ! -d /srv/tools/phpcs/CodeSniffer/Standards/WordPress ]]; then
 		echo -e "\nDownloading WordPress-Coding-Standards, snifs for PHP_CodeSniffer, see https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards"
-		git clone git://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git /srv/www/phpcs/CodeSniffer/Standards/WordPress
+		git clone git://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git /srv/tools/phpcs/CodeSniffer/Standards/WordPress
 	else
 		echo -e "\nUpdating PHP_CodeSniffer..."
-		cd /srv/www/phpcs/CodeSniffer/Standards/WordPress
+		cd /srv/tools/phpcs/CodeSniffer/Standards/WordPress
 		git pull --rebase origin master
 	fi
 
