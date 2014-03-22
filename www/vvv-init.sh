@@ -20,6 +20,7 @@ if [ ! -d /srv/www/$CURRENT_SITE ]; then
 	# todo sed other config values
 fi
 
+
 CURRENT_SITE="wordcamp.dev"
 echo "Provisioning $CURRENT_SITE"
 if [ ! -d /srv/www/$CURRENT_SITE ]; then
@@ -37,21 +38,25 @@ if [ ! -d /srv/www/$CURRENT_SITE ]; then
 	# todo disable error handler
 fi
 
-exit
 
-CURRENT_SITE="wp.dev"
+CURRENT_SITE="/srv/www/wp.dev"
 echo "Provisioning $CURRENT_SITE"
-if [[ ! -d /srv/www/$CURRENT_SITE ]]; then
-	git clone --recursive https://github.com/iandunn/WordPress-Skeleton.git /srv/www/$CURRENT_SITE
+if [[ ! -d $CURRENT_SITE ]]; then
+	git clone https://github.com/iandunn/WordPress-Skeleton.git $CURRENT_SITE
 
-	mv /srv/www/$CURRENT_SITE/environment-config-sample.php    /srv/www/$CURRENT_SITE/environment-config.php
-	sed -i 's/database_name_here/wp_dev/'                      /srv/www/$CURRENT_SITE/environment-config.php
-	sed -i 's/username_here/macenzie/'                         /srv/www/$CURRENT_SITE/environment-config.php
-	sed -i 's/password_here/password/'                         /srv/www/$CURRENT_SITE/environment-config.php
+	cd $CURRENT_SITE
+	git submodule init
+	git submodule update $CURRENT_SITE/content/plugins/wordpress-functionality-plugin-skeleton
+   	rm -rf .git* .htaccess README.md content/plugins/wordpress-functionality-plugin-skeleton/.git content/plugins/akisment
+   	wp core download --path=$CURRENT_SITE/wordpress
+
+	mv $CURRENT_SITE/environment-config-sample.php    $CURRENT_SITE/environment-config.php
+	sed -i 's/database_name_here/wp_dev/'             $CURRENT_SITE/environment-config.php
+	sed -i 's/username_here/macenzie/'                $CURRENT_SITE/environment-config.php
+	sed -i 's/password_here/password/'                $CURRENT_SITE/environment-config.php
 
 	# todo svn/git co your plugins from wporg repo?
 fi
-
 
 # todo wp-develop.dev
 
