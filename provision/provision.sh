@@ -528,7 +528,7 @@ fi
 find /etc/nginx/custom-sites -name 'vvv-auto-*.conf' -exec rm {} \;
 
 # Look for site setup scripts
-for SITE_CONFIG_FILE in $(find /srv/www -maxdepth 5 -name 'vvv-init.sh'); do
+for SITE_CONFIG_FILE in $(find /vagrant/provision -maxdepth 5 -name 'vvv-init.sh'); do
 	DIR="$(dirname $SITE_CONFIG_FILE)"
 	(
 		cd $DIR
