@@ -39,15 +39,15 @@ Vagrant.configure("2") do |config|
   # required to enter a password for Vagrant to access your hosts file.
   #
   # By default, we'll include the domains setup by VVV through the vvv-hosts file
-  # located in the www/ directory.
+  # located in the config/init directory.
   #
   # Other domains can be automatically added by including a vvv-hosts file containing
   # individual domains separated by whitespace in subdirectories of www/.
   if defined? VagrantPlugins::HostsUpdater
 
-    # Capture the paths to all vvv-hosts files under the www/ directory.
+    # Capture the paths to all vvv-hosts files under the config/init directory.
     paths = []
-    Dir.glob(vagrant_dir + '/www/**/vvv-hosts').each do |path|
+    Dir.glob(vagrant_dir + '/config/init/**/vvv-hosts').each do |path|
       paths << path
     end
 

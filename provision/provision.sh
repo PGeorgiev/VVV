@@ -555,7 +555,7 @@ done
 echo -e "\nRestart Nginx..."
 service nginx restart
 
-# Parse any vvv-hosts file located in www/ or subdirectories of www/
+# Parse any vvv-hosts file located in config/init or subdirectories of config/init
 # for domains to be added to the virtual machine's host file so that it is
 # self aware.
 #
@@ -564,7 +564,7 @@ echo "Cleaning the virtual machine's /etc/hosts file..."
 sed -n '/# vvv-auto$/!p' /etc/hosts > /tmp/hosts
 mv /tmp/hosts /etc/hosts
 echo "Adding domains to the virtual machine's /etc/hosts file..."
-find /srv/www/ -maxdepth 5 -name 'vvv-hosts' | \
+find /srv/config/init/ -maxdepth 5 -name 'vvv-hosts' | \
 while read hostfile; do
 	while IFS='' read -r line || [ -n "$line" ]; do
 		if [[ "#" != ${line:0:1} ]]; then

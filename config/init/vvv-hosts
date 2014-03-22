@@ -6,7 +6,7 @@
 # In addition to this file, other files named vvv-hosts can
 # be created with additional domain information. These will be
 # automatically parsed as long as they are located in subdirectories
-# of the www/ directory.
+# of the config/init/ directory.
 vvv.dev
 local.wordpress.dev
 local.wordpress-trunk.dev
