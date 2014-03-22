@@ -29,6 +29,10 @@ if [ ! -d $CURRENT_SITE ]; then
 	svn co https://wordcamp.svn.wordpress.org/bin        $CURRENT_SITE/bin        --username=iandunn
 	svn co https://wordcamp.svn.wordpress.org/wp-content $CURRENT_SITE/wp-content --username=iandunn
 
+	sudo mkdir /home/wordcamp
+	sudo mkdir /home/wordcamp/public_html
+	sudo ln -s $CURRENT_SITE/wordpress /home/wordcamp/public_html/mu
+
 	cp $CURRENT_SITE/wp-config-sample.php                $CURRENT_SITE/wp-config.php
 	sed -i 's/database_name_here/wordcamp_dev/'          $CURRENT_SITE/wp-config.php
 	sed -i 's/username_here/macenzie/'                   $CURRENT_SITE/wp-config.php
