@@ -6,9 +6,9 @@
 -- CREATE DATABASE IF NOT EXISTS `wordpress_trunk`;
 -- GRANT ALL PRIVILEGES ON `wordpress_trunk`.* TO 'wp'@'localhost' IDENTIFIED BY 'wp';
 CREATE DATABASE IF NOT EXISTS `wp_develop_dev`;
-GRANT ALL PRIVILEGES ON `wp_develop_dev`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON `wp_develop_dev`.* TO 'veronica'@'localhost' IDENTIFIED BY 'password';
 CREATE DATABASE IF NOT EXISTS `wp_develop_dev_unit_tests`;
-GRANT ALL PRIVILEGES ON `wp_develop_dev_unit_tests`.* TO 'macenzie'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON `wp_develop_dev_unit_tests`.* TO 'veronica'@'localhost' IDENTIFIED BY 'password';
 
 # Create an external user with privileges on all databases in mysql so
 # that a connection can be made from the local machine without an SSH tunnel

@@ -14,7 +14,7 @@ if [ ! -d $CURRENT_SITE ]; then
 	cp $CURRENT_SITE/config-sample.php $CURRENT_SITE/config.php
 
 	sed -i 's/putyourdbnamehere/supportpress_dev/'  $CURRENT_SITE/config.php
-	sed -i 's/usernamehere/macenzie/'               $CURRENT_SITE/config.php
+	sed -i 's/usernamehere/veronica/'               $CURRENT_SITE/config.php
 	sed -i 's/yourpasswordhere/password/'           $CURRENT_SITE/config.php
 
 	# todo sed other config values
@@ -35,7 +35,7 @@ if [ ! -d $CURRENT_SITE ]; then
 
 	cp $CURRENT_SITE/wp-config-sample.php                $CURRENT_SITE/wp-config.php
 	sed -i 's/database_name_here/wordcamp_dev/'          $CURRENT_SITE/wp-config.php
-	sed -i 's/username_here/macenzie/'                   $CURRENT_SITE/wp-config.php
+	sed -i 's/username_here/veronica/'                   $CURRENT_SITE/wp-config.php
 	sed -i 's/password_here/password/'                   $CURRENT_SITE/wp-config.php
 
 	# todo misc bits from wp-config like content_dir/url, multisite
@@ -57,7 +57,7 @@ if [[ ! -d $CURRENT_SITE ]]; then
 
 	mv $CURRENT_SITE/environment-config-sample.php    $CURRENT_SITE/environment-config.php
 	sed -i 's/database_name_here/wp_dev/'             $CURRENT_SITE/environment-config.php
-	sed -i 's/username_here/macenzie/'                $CURRENT_SITE/environment-config.php
+	sed -i 's/username_here/veronica/'                $CURRENT_SITE/environment-config.php
 	sed -i 's/password_here/password/'                $CURRENT_SITE/environment-config.php
 
 	# todo svn/git co your plugins from wporg repo?
@@ -71,7 +71,7 @@ if [[ ! -d $CURRENT_SITE ]]; then
 
 	cp $CURRENT_SITE/environment-config-sample.php   $CURRENT_SITE/environment-config.php
 	sed -i "s/database_name_here/wp_skeleton_dev/"   $CURRENT_SITE/environment-config.php
-	sed -i "s/username_here/macenzie/"               $CURRENT_SITE/environment-config.php
+	sed -i "s/username_here/veronica/"               $CURRENT_SITE/environment-config.php
 	sed -i 's/password_here/password/'               $CURRENT_SITE/environment-config.php
 fi
 
@@ -89,7 +89,7 @@ if [[ ! -d $CURRENT_SITE ]]; then
 
 	mv $CURRENT_SITE/environment-config-sample.php    $CURRENT_SITE/environment-config.php
 	sed -i 's/database_name_here/wpms_dev/'           $CURRENT_SITE/environment-config.php
-	sed -i 's/username_here/macenzie/'                $CURRENT_SITE/environment-config.php
+	sed -i 's/username_here/veronica/'                $CURRENT_SITE/environment-config.php
 	sed -i 's/password_here/password/'                $CURRENT_SITE/environment-config.php
 
 	# todo svn/git co your plugins from wporg repo?

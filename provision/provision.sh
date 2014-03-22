@@ -471,7 +471,7 @@ if [[ $ping_result == *bytes?from* ]]; then
 		svn checkout http://develop.svn.wordpress.org/trunk/ /srv/www/wp-develop.dev
 		cd /srv/www/wp-develop.dev/src/
 		echo "Configuring WordPress develop..."
-		wp core config --dbname=wp_develop_dev --dbuser=macenzie --dbpass=password --quiet --extra-php --allow-root <<PHP
+		wp core config --dbname=wp_develop_dev --dbuser=veronica --dbpass=password --quiet --extra-php --allow-root <<PHP
 // Allow (src|build).wp-develop.dev.dev to share the same database
 if ( 'build' == basename( dirname( __FILE__) ) ) {
 	#define( 'WP_HOME', 'http://build.wp-develop.dev.dev' );
