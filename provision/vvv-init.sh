@@ -4,6 +4,9 @@ CURRENT_SITE="/srv/www/misc.dev"
 echo "Provisioning $CURRENT_SITE"
 if [[ ! -d $CURRENT_SITE/wptest ]]; then
 	git clone --recursive https://github.com/manovotny/wptest.git $CURRENT_SITE/wptest
+else
+	cd $CURRENT_SITE/wptest
+	git pull
 fi
 
 
