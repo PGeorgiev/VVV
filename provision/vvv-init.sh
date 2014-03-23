@@ -55,7 +55,8 @@ if [[ ! -d $CURRENT_SITE ]]; then
 	cd $CURRENT_SITE
 	git submodule init
 	git submodule update $CURRENT_SITE/content/plugins/wordpress-functionality-plugin-skeleton
-   	rm -rf .git* .htaccess README.md content/plugins/wordpress-functionality-plugin-skeleton/.git content/plugins/akismet
+	mv content/plugins/wordpress-functionality-plugin-skeleton/functionality-plugin-skeleton.php content/mu-plugins/sandbox-functionality.php
+   	rm -rf .git* .htaccess README.md content/plugins/wordpress-functionality-plugin-skeleton/ content/plugins/akismet
    	wp core download --path=$CURRENT_SITE/wordpress
 
 	mv $CURRENT_SITE/environment-config-sample.php    $CURRENT_SITE/environment-config.php
@@ -87,7 +88,8 @@ if [[ ! -d $CURRENT_SITE ]]; then
 	cd $CURRENT_SITE
 	git submodule init
 	git submodule update $CURRENT_SITE/content/plugins/wordpress-functionality-plugin-skeleton
-   	rm -rf .git* .htaccess README.md content/plugins/wordpress-functionality-plugin-skeleton/.git content/plugins/akismet
+   	mv content/plugins/wordpress-functionality-plugin-skeleton/functionality-plugin-skeleton.php content/mu-plugins/sandbox-functionality.php
+    rm -rf .git* .htaccess README.md content/plugins/wordpress-functionality-plugin-skeleton/ content/plugins/akismet
    	wp core download --path=$CURRENT_SITE/wordpress
 
 	mv $CURRENT_SITE/environment-config-sample.php    $CURRENT_SITE/environment-config.php
