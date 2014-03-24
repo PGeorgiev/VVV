@@ -14,6 +14,7 @@ alias df='df -h'
 alias du='du -h'
 alias grep='grep -i'
 alias rm='rm -i'
+alias vvv='cd /srv/www'
 
 # Other
 alias wp='wp --path=wordpress'
