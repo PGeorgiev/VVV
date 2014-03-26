@@ -1,0 +1,17 @@
+#!/bin/bash
+MAKEPOT="/srv/www/wp-develop.dev/tools/i18n/makepot.php"
+
+# Plugins
+/usr/bin/php $MAKEPOT wp-plugin /srv/www/wp.dev/content/plugins/basic-google-maps-placemarks/     /srv/www/wp.dev/content/plugins/basic-google-maps-placemarks/languages/basic-google-maps-placemarks.pot
+/usr/bin/php $MAKEPOT wp-plugin /srv/www/wordcamp.dev/wp-content/plugins/camptix/                 /srv/www/wordcamp.dev/wp-content/plugins/camptix/languages/camptix.pot
+/usr/bin/php $MAKEPOT wp-plugin /srv/www/wordcamp.dev/wp-content/plugins/camptix-network-tools    /srv/www/wordcamp.dev/wp-content/plugins/camptix-network-tools/languages/camptix-network-tools.pot
+
+
+# Themes
+#/usr/bin/php $MAKEPOT wp-theme /srv/www/wordcamp.dev/wp-content/themes/wordcamp-base/            /srv/www/wordcamp.dev/wp-content/themes/wordcamp-base/languages/wordcampbase.pot
+
+echo ""
+echo "Done"
+echo ""
+
+exit 0
