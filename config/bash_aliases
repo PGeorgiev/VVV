@@ -20,3 +20,4 @@ alias tar='tar --exclude-vcs'
 # Other
 alias wp='wp --path=wordpress'
 alias patch='patch --no-backup-if-mismatch'
+alias codeception='php /srv/tools/codecept.phar --config=.'
