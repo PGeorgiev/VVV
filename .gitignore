@@ -37,6 +37,7 @@
 
 # No need to share our individual sites with each other
 /www/*
+/tools
 
 # And no need to share individual SQL files with each other
 *.sql
