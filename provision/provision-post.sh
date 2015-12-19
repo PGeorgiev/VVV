@@ -20,3 +20,6 @@ cp "$DOTFILES_DIR/.subversion/config" "$HOME_DIR/.subversion/config"
 cp "$DOTFILES_DIR/.ssh/config"        "$HOME_DIR/.ssh/config"
 
 # todo what to do about .subversion/servers ? append to existing?
+
+sudo apt-get update
+sudo apt-get upgrade --yes
