@@ -34,7 +34,9 @@
 /log/*.log
 
 # No need to share our individual sites with each other
-/www/*
+# /www/*
+/www/*/logs
+/www/*/public_html
 /tools
 
 # And no need to share individual SQL files with each other
