@@ -6,6 +6,8 @@
 HOME_DIR="/home/vagrant"
 DOTFILES_DIR="$HOME_DIR/dotfiles"
 
+bash /home/vagrant/bin/xdebug_on
+
 if [ ! -d $DOTFILES_DIR ]; then
 	git clone https://github.com/iandunn/dotfiles.git $DOTFILES_DIR
 else
