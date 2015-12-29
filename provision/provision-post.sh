@@ -6,8 +6,14 @@
 HOME_DIR="/home/vagrant"
 DOTFILES_DIR="$HOME_DIR/dotfiles"
 
+# Enable PHP Xdebug extension
 bash /home/vagrant/bin/xdebug_on
 
+# Enable PHP IMAP extension
+sudo php5enmod imap
+sudo service php5-fpm restart
+
+# Setup Dotfiles
 if [ ! -d $DOTFILES_DIR ]; then
 	git clone https://github.com/iandunn/dotfiles.git $DOTFILES_DIR
 else
@@ -23,5 +29,7 @@ cp "$DOTFILES_DIR/.ssh/config"        "$HOME_DIR/.ssh/config"
 
 # todo what to do about .subversion/servers ? append to existing?
 
+# Install Ubuntu updates
 sudo apt-get update
 sudo apt-get upgrade --yes
+#todo sudo apt-get autoremove ?
