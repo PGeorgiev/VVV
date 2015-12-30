@@ -6,10 +6,8 @@
 HOME_DIR="/home/vagrant"
 DOTFILES_DIR="$HOME_DIR/dotfiles"
 
-# Enable PHP Xdebug extension
-bash /home/vagrant/bin/xdebug_on
-
-# Enable PHP IMAP extension
+# Enable/disable PHP extensions
+sudo php5enmod xdebug
 sudo php5enmod imap
 sudo service php5-fpm restart
 
