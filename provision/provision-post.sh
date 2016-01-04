@@ -31,3 +31,12 @@ cp "$DOTFILES_DIR/.ssh/config"        "$HOME_DIR/.ssh/config"
 sudo apt-get update
 sudo apt-get upgrade --yes
 #todo sudo apt-get autoremove ?
+
+# Setup folder that WordCamp.org bin scripts expect
+sudo mkdir -p /home/wordcamp/public_html
+sudo ln -s /srv/www/wordcamp.dev/public_html/wordpress/ /home/wordcamp/public_html/mu
+
+# todo upgrade nodejs to 4.x ?
+	# https://nodejs.org/en/download/package-manager/
+
+# todo echo reminder to install `vagrant-faster` plugin on host, or detect if it's not installed?
