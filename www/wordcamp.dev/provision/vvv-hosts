@@ -1,21 +1,22 @@
 wordcamp.dev
 	central.wordcamp.dev
 	plan.wordcamp.dev
+	2016.new-site.wordcamp.dev
 	sf.wordcamp.dev
-	new-site.wordcamp.dev
-	content.wordcamp.dev
-	misc.wordcamp.dev
-	atlanta.wordcamp.dev
+		2013.sf.wordcamp.dev
+		2014.sf.wordcamp.dev
+	2016.content.wordcamp.dev
+	2016.misc.wordcamp.dev
+	2014.atlanta.wordcamp.dev
 	seattle.wordcamp.dev
-	columbus.wordcamp.dev
-	toronto.wordcamp.dev
+		2014.seattle.wordcamp.dev
+		2015-experienced.seattle.wordcamp.dev
+		2015-beginner.seattle.wordcamp.dev
+	2014.columbus.wordcamp.dev
+	2014.toronto.wordcamp.dev
 	us.wordcamp.dev
 		2015.us.wordcamp.dev
-	rhodeisland.wordcamp.dev
-	netherlands.wordcamp.dev
-	la.wordcamp.dev
-	raleigh.wordcamp.dev
-	russia.wordcamp.dev
+	2015.rhodeisland.wordcamp.dev
 
 buddycamp.dev
-	brighton.buddycamp.dev
+	2015.brighton.buddycamp.dev
